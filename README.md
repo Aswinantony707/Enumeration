@@ -32,80 +32,56 @@ Google hacking, also known as Google dorking, is a technique that involves using
 
 site: This operator allows you to search for pages that are within a specific website or domain. For example, "site:example.com" would search for pages that are on the example.com domain.
 Following searches for all the sites that is in the domain yahoo.com
+<img width="1911" height="1198" alt="image" src="https://github.com/user-attachments/assets/1d113184-3604-4a0e-9ae0-c52a2d81bc4c" />
+
+
 
 filetype: This operator allows you to search for files of a specific type. For example, "filetype:pdf" would search for all PDF files.
 Following searches for pdf file in the domain yahoo.com
 
+<img width="1903" height="1102" alt="image" src="https://github.com/user-attachments/assets/453d9188-db70-4f88-be58-3588eeeeefae" />
 
 
 intext: This operator allows you to search for pages that contain specific text within the body of the page. For example, "intext:password" would search for pages that contain the word "password" within the body of the page.
+<img width="1907" height="1045" alt="image" src="https://github.com/user-attachments/assets/0fdbb0c4-cf0d-4e38-bd45-1531de4ddfcb" />
 
 
 inurl: This operator allows you to search for pages that contain specific text within the URL. For example, "inurl:admin" would search for pages that contain the word "admin" within the URL.
+<img width="1896" height="1065" alt="image" src="https://github.com/user-attachments/assets/badcf652-6244-46df-9d6c-f84f9867b09b" />
 
 intitle: This operator allows you to search for pages that contain specific text within the title tag. For example, "intitle:index of" would search for pages that contain "index of" within the title tag.
+<img width="1906" height="1108" alt="image" src="https://github.com/user-attachments/assets/5984c751-5957-4e5d-8b0f-493712ee566f" />
 
 link: This operator allows you to search for pages that link to a specific URL. For example, "link:example.com" would search for pages that link to the example.com domain.
+<img width="1892" height="1126" alt="image" src="https://github.com/user-attachments/assets/8e13f2cc-adfe-4a1b-ac6a-8ba1e8dd0408" />
 
 cache: This operator allows you to view the cached version of a page. For example, "cache:example.com" would show the cached version of the example.com website.
+<img width="994" height="631" alt="image" src="https://github.com/user-attachments/assets/cb7f6ce6-96c9-46ca-b935-a018b4dadb67" />
 
+## DNS Enumeration:
+## DNS Recon:
+
+<img width="873" height="721" alt="Screenshot 2026-02-06 085648" src="https://github.com/user-attachments/assets/b1084aaf-baf4-4710-a74c-66dddad15612" />
+ <img width="1047" height="421" alt="Screenshot 2026-02-06 090150" src="https://github.com/user-attachments/assets/02d32837-5777-4b94-b476-f5a3ddecb05d" />
+
+
+## dnsenum:
+<img width="943" height="666" alt="Screenshot 2026-02-06 090437" src="https://github.com/user-attachments/assets/591d7b79-2c75-4abe-bc17-4c4abaf24a5b" />
+
+
+## smtp-user-enum:
+
+<img width="861" height="354" alt="Screenshot 2026-02-06 090652" src="https://github.com/user-attachments/assets/10c320ad-9fd5-4f3b-bc41-e718be339905" />
+
+## Telnet 
  
-#DNS Enumeration
+ <img width="334" height="115" alt="Screenshot 2026-02-06 091040" src="https://github.com/user-attachments/assets/c7c20227-df52-4025-a778-5440cf399097" />
 
-
-##DNS Recon
-provides the ability to perform:
-Check all NS records for zone transfers
-Enumerate general DNS records for a given domain (MX, SOA, NS, A, AAAA, SPF , TXT)
-Perform common SRV Record Enumeration
-Top level domain expansion
-## OUTPUT:
-
-
-
-
-
-
-
-##dnsenum
-Dnsenum is a multithreaded perl script to enumerate DNS information of a domain and to discover non-contiguous ip blocks. The main purpose of Dnsenum is to gather as much information as possible about a domain. The program currently performs the following operations:
-
-Get the host’s addresses (A record).
-Get the namservers (threaded).
-Get the MX record (threaded).
-Perform axfr queries on nameservers and get BIND versions(threaded).
-Get extra names and subdomains via google scraping (google query = “allinurl: -www site:domain”).
-Brute force subdomains from file, can also perform recursion on subdomain that have NS records (all threaded).
-Calculate C class domain network ranges and perform whois queries on them (threaded).
-Perform reverse lookups on netranges (C class or/and whois netranges) (threaded).
-Write to domain_ips.txt file ip-blocks.
-This program is useful for pentesters, ethical hackers and forensics experts. It also can be used for security tests.
-
-
-##smtp-user-enum
-Username guessing tool primarily for use against the default Solaris SMTP service. Can use either EXPN, VRFY or RCPT TO.
-
-
-In metasploit list all the usernames using head /etc/passwd or cat /etc/passwd:
-
-select any username in the first column of the above file and check the same
-
-
-#Telnet for smtp enumeration
-Telnet allows to connect to remote host based on the port no. For smtp port no is 25
-telnet <host address> 25 to connect
-and issue appropriate commands
   
- ##Output
-  
-  
-
 ## nmap –script smtp-enum-users.nse <hostname>
 
-The smtp-enum-users.nse script attempts to enumerate the users on a SMTP server by issuing the VRFY, EXPN or RCPT TO commands. The goal of this script is to discover all the user accounts in the remote system.
 
-
-## OUTPUT:
+<img width="708" height="201" alt="Screenshot 2026-02-06 091415" src="https://github.com/user-attachments/assets/63b682b8-a3a2-43a7-8d37-3947fdb1843c" />
 
 
 ## RESULT:
